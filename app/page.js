@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { assets } from "@/assets/assets";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
@@ -22,8 +22,8 @@ export default function Home() {
 			</div>
 			<Navbar />
 			<LandingPage />
-			{/* <About /> */}
-			{/* <Services /> */}
+			<About />
+			<Services />
 			{/* <Portfolio /> */}
 			{/* <Contact /> */}
 			{/* <Footer /> */}

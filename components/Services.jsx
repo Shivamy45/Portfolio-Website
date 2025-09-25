@@ -4,16 +4,16 @@ import ServicesCard from "./ServicesCard";
 
 const Services = () => {
 	return (
-		<div className="border-2 border-black">
-			<div className="border-2 border-amber-600">
-				<p>What I Offer</p>
-				<p>My Services</p>
-				<p>
+		<div className="flex flex-col gap-10 justify-center items-center min-h-screen w-full text-[#242424]">
+			<div className=" text-center w-2/5 flex flex-col gap-5 font-ovo">
+				<p className="text-2xl">What I Offer</p>
+				<p className="text-6xl">My Services</p>
+				<p className="text-[#565656] text-[20px] leading-[40px]">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit.
 					Blanditiis mollitia ad animi consectetur a corporis?
 				</p>
 			</div>
-			<div className="flex border-2 border-gray-700">
+			<div className="flex w-3/4 gap-5">
 				{serviceData.map((item, idx) => (
 					<ServicesCard key={idx} data={item} />
 				))}
