@@ -5,14 +5,14 @@ import { assets } from "@/assets/assets";
 
 const Navbar = () => {
 	return (
-		<nav className="flex justify-around border-2 border-red-700">
+		<nav className="flex justify-around items-center">
 			<Image
 				src={assets.logo}
-				className="w-38 cursor-pointer border-2 border-black"
+				className="w-38 cursor-pointer"
 				alt="Logo"
 			/>
-			<div>
-				<ul className="flex gap-16 bg-amber-50 border-2 border-black">
+			<div className="">
+				<ul className="flex gap-16">
 					<li>
 						<Link href={"#home"}>Home</Link>
 					</li>
@@ -27,16 +27,16 @@ const Navbar = () => {
 					</li>
 				</ul>
 			</div>
-			<div className="flex border-2 border-black">
+			<div className="flex gap-6 items-center justify-center">
 				<Image
 					src={assets.moon_icon}
-					className="w-8 h-8 cursor-pointer"
+					className="w-7 h-7 cursor-pointer"
 					alt="moon"></Image>
-				<Link href={"#contact"}>
+				<Link href={"#contact"} className="btn">
 					Connect
 					<Image
 						src={assets.arrow_icon}
-						className="w-4 h-4"
+						className="w-3 h-3"
 						alt="arrow"
 					/>
 				</Link>

@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
-*{
-    font-family: Outfit;
+* {
+	font-family: Outfit;
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5;
+	border: 1px solid #a7a7a7;
+	border-radius: 100px;
+	padding: 16px 8px;
+	font-size: 18px;
 }

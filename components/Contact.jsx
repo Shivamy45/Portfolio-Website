@@ -23,7 +23,7 @@ const Contact = () => {
 					id="message"
 					placeholder="Enter your Message"></textarea>
 				<button type="submit" className="bg-black text-white">
-					Submit now <Image src={assets.right_arrow_white} />
+					Submit now <Image src={assets.right_arrow_white} alt="right arrow" />
 				</button>
 			</form>
 		</div>
