@@ -5,14 +5,14 @@ import { assets } from "@/assets/assets";
 
 const Navbar = () => {
 	return (
-		<nav className="flex justify-around items-center">
+		<nav className="flex justify-around items-center py-1 sticky top-0 z-50 backdrop-blur-sm">
 			<Image
 				src={assets.logo}
 				className="w-38 cursor-pointer"
 				alt="Logo"
 			/>
-			<div className="">
-				<ul className="flex gap-16">
+			<div className="border border-white px-9 py-2 rounded-4xl drop-shadow-[0_10px_35px_0_rgba(0,0,0,0.03)] bg-white/50">
+				<ul className="flex gap-16 font-ovo">
 					<li>
 						<Link href={"#home"}>Home</Link>
 					</li>

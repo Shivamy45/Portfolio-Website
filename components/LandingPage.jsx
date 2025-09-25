@@ -5,12 +5,18 @@ import React from "react";
 
 const LandingPage = () => {
 	return (
-		<div className="flex flex-col border-2 border-green-700">
-			{/* My Image */}
-			<Image src={assets.user_image} className="w-30 h-30" alt="Me" />
-			<p>
+		<section className="flex flex-col justify-center items-center h-screen w-full">
+			<div className="">
+				{/* My Image */}
+				<Image src={assets.user_image} className="w-20" alt="Me" />
+			</div>
+			<p className="font-ovo flex text-[28px] justify-center items-center">
 				Hi! I'm Shivam{" "}
-				<Image src={assets.hand_icon} alt="waving hand" />
+				<Image
+					src={assets.hand_icon}
+					className="w-8 h-8"
+					alt="waving hand"
+				/>
 			</p>
 			{/* Animation needed */}
 			<h1>I am a Full Stack Developer</h1>
@@ -29,7 +35,7 @@ const LandingPage = () => {
 					<Image src={assets.download_icon} alt="download" />
 				</Link>
 			</div>
-		</div>
+		</section>
 	);
 };
 
