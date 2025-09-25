@@ -5,7 +5,7 @@ import { assets } from "@/assets/assets";
 
 const Navbar = () => {
 	return (
-		<nav className="flex justify-around items-center py-1 sticky top-0 z-50 backdrop-blur-sm">
+		<nav className="flex justify-around items-center py-1 fixed top-0 left-0 z-50 backdrop-blur-sm w-full">
 			<Image
 				src={assets.logo}
 				className="w-38 cursor-pointer"

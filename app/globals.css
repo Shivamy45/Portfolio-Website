@@ -4,10 +4,10 @@
 	font-family: Outfit;
 }
 
+.font-ovo,
 .font-ovo * {
-	font-family: "Ovo" !important;
+	font-family: Ovo !important;
 }
-
 .btn {
 	display: flex;
 	justify-content: center;
@@ -19,4 +19,17 @@
 	font-weight: 400;
 	background-color: #ffffff80;
 	color: #4d4d4d;
+}
+
+.dark_btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5;
+	border: none;
+	border-radius: 100px;
+	padding: 10px 25px;
+	font-weight: 400;
+	background-color: #202020;
+	color: white;
 }
