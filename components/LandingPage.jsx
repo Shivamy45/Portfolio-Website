@@ -1,12 +1,14 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
+import { Link as ScrollLink } from "react-scroll";
 
 const LandingPage = () => {
 	return (
-		<section className="flex flex-col gap-7 justify-center items-center min-h-screen min-w-full">
+		<section
+			id="home"
+			className="flex flex-col gap-7 justify-center items-center min-h-screen min-w-full">
 			<div className="w-45 h-45 rounded-full overflow-hidden">
 				{/* My Image */}
 				<Image
@@ -42,22 +44,30 @@ const LandingPage = () => {
 				odio quibusdam!
 			</p>
 			<div className="flex justify-center items-center text-lg gap-4">
-				<Link href={"#contact"} className="dark_btn">
+				<ScrollLink
+					to="contact"
+					duration={0}
+					smooth={true}
+					className="dark_btn">
 					connect with me{" "}
 					<Image
 						src={assets.right_arrow_white}
 						alt="right arrow"
 						className="w-3 h-3"
 					/>
-				</Link>
-				<Link href={"my-resume"} className="btn">
+				</ScrollLink>
+				<a
+					href="/resume.pdf"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="btn">
 					my resume{" "}
 					<Image
 						src={assets.download_icon}
 						alt="download"
 						className="w-4 h-4"
 					/>
-				</Link>
+				</a>
 			</div>
 		</section>
 	);

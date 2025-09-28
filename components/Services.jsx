@@ -4,7 +4,7 @@ import ServicesCard from "./ServicesCard";
 
 const Services = () => {
 	return (
-		<div className="flex flex-col gap-7 justify-center items-center min-h-screen min-w-full text-[#242424]">
+		<section id="services" className="flex flex-col gap-7 justify-center items-center min-h-screen min-w-full text-[#242424]">
 			<div className=" text-center w-2/5 flex flex-col gap-5 font-ovo">
 				<p className="text-2xl">What I Offer</p>
 				<p className="text-6xl">My Services</p>
@@ -18,7 +18,7 @@ const Services = () => {
 					<ServicesCard key={idx} data={item} />
 				))}
 			</div>
-		</div>
+		</section>
 	);
 };
 

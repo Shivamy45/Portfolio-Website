@@ -25,7 +25,7 @@ const Contact = () => {
 		}
 	};
 	return (
-		<div className="flex flex-col gap-10 justify-center items-center min-h-screen min-w-full text-[#242424]">
+		<section id="contact" className="flex flex-col gap-10 justify-center items-center min-h-screen min-w-full text-[#242424]">
 			<div className="text-center w-1/2 font-ovo flex flex-col gap-5">
 				<p className="text-2xl">Connect With Me</p>
 				<p className="text-6xl">Get In Touch</p>
@@ -72,7 +72,7 @@ const Contact = () => {
 					)}
 				</button>
 			</form>
-		</div>
+		</section>
 	);
 };
 

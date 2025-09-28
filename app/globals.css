@@ -4,6 +4,10 @@
 	font-family: Outfit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .font-ovo,
 .font-ovo * {
 	font-family: Ovo !important;

@@ -6,7 +6,7 @@ import AboutCard2 from "./AboutCard2";
 
 const About = () => {
 	return (
-		<div className="flex flex-col gap-7 justify-center items-center min-h-screen min-w-full">
+		<section id="about" className="flex flex-col gap-7 justify-center items-center min-h-screen min-w-full">
 			<div className="font-ovo text-center">
 				<p className="text-2xl">Introduction</p>
 				<p className="text-6xl">About Me</p>
@@ -43,7 +43,7 @@ const About = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
 

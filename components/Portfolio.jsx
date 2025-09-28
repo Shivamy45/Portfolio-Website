@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Portfolio = () => {
 	return (
-		<div className="flex flex-col gap-7 justify-center items-center min-h-screen min-w-full text-[#242424]">
+		<section id="work" className="flex flex-col gap-7 justify-center items-center min-h-screen min-w-full text-[#242424]">
 			<div className="text-center w-1/2 font-ovo flex flex-col gap-9">
 				<p className="text-2xl">My portfolio</p>
 				<p className="text-6xl">My latest work</p>
@@ -29,7 +29,7 @@ const Portfolio = () => {
 					className="w-4 h-2"
 				/>
 			</Link>
-		</div>
+		</section>
 	);
 };
 
