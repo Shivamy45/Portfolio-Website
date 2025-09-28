@@ -24,9 +24,9 @@ export default function Home() {
 			<LandingPage />
 			<About />
 			<Services />
-			{/* <Portfolio /> */}
-			{/* <Contact /> */}
-			{/* <Footer /> */}
+			<Portfolio />
+			<Contact />
+			<Footer />
 		</div>
 	);
 }

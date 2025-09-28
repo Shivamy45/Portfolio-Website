@@ -6,7 +6,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const LandingPage = () => {
 	return (
-		<section className="flex flex-col gap-5 justify-center items-center min-h-screen w-full">
+		<section className="flex flex-col gap-7 justify-center items-center min-h-screen min-w-full">
 			<div className="w-45 h-45 rounded-full overflow-hidden">
 				{/* My Image */}
 				<Image
