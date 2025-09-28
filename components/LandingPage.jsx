@@ -3,12 +3,19 @@ import Image from "next/image";
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { Link as ScrollLink } from "react-scroll";
+import { useTheme } from "@/contexts/ThemeContext";
+import { motion } from "framer-motion";
 
 const LandingPage = () => {
+	const { theme } = useTheme();
 	return (
-		<section
+		<motion.section
+			initial={{ opacity: 0, y: 50 }} // start state
+			whileInView={{ opacity: 1, y: 0 }} // animate when in viewport
+			viewport={{ once: true, amount: 0.3 }} // trigger once when 30% visible
+			transition={{ duration: 0.6, ease: "easeOut" }}
 			id="home"
-			className="flex flex-col gap-7 justify-center items-center min-h-screen min-w-full">
+			className="bg-[var(--color-bg)] flex flex-col gap-7 justify-center items-center min-h-screen min-w-full">
 			<div className="w-45 h-45 rounded-full overflow-hidden">
 				{/* My Image */}
 				<Image
@@ -38,7 +45,7 @@ const LandingPage = () => {
 					delaySpeed={900}
 				/>
 			</h1>
-			<p className="text-xl/relaxed text-[#565656] w-1/2 text-center font-ovo">
+			<p className="text-xl/relaxed text-[var(--color-text-secondary)] w-1/2 text-center font-ovo">
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
 				debitis? Mollitia eos modi consectetur non ea rem voluptatem
 				odio quibusdam!
@@ -51,7 +58,11 @@ const LandingPage = () => {
 					className="dark_btn">
 					connect with me{" "}
 					<Image
-						src={assets.right_arrow_white}
+						src={
+							theme === "dark"
+								? assets.right_arrow_bold
+								: assets.right_arrow_bold_dark
+						}
 						alt="right arrow"
 						className="w-3 h-3"
 					/>
@@ -69,7 +80,7 @@ const LandingPage = () => {
 					/>
 				</a>
 			</div>
-		</section>
+		</motion.section>
 	);
 };
 

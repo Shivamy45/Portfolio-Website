@@ -3,8 +3,10 @@ import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React from "react";
 import { useState } from "react";
-
+import { useTheme } from "@/contexts/ThemeContext";
+import { motion } from "framer-motion";
 const Contact = () => {
+	const { theme } = useTheme();
 	const [loading, setLoading] = useState(false);
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -25,11 +27,17 @@ const Contact = () => {
 		}
 	};
 	return (
-		<section id="contact" className="flex flex-col gap-10 justify-center items-center min-h-screen min-w-full text-[#242424]">
+		<motion.section
+			initial={{ opacity: 0, y: 50 }} // start state
+			whileInView={{ opacity: 1, y: 0 }} // animate when in viewport
+			viewport={{ once: true, amount: 0.3 }} // trigger once when 30% visible
+			transition={{ duration: 0.6, ease: "easeOut" }}
+			id="contact"
+			className="bg-[var(--color-bg)] flex flex-col gap-10 justify-center items-center min-h-screen min-w-full text-[var(--color-text-primary)]">
 			<div className="text-center w-1/2 font-ovo flex flex-col gap-5">
 				<p className="text-2xl">Connect With Me</p>
 				<p className="text-6xl">Get In Touch</p>
-				<p className="text-xl/normal text-[#565656]">
+				<p className="text-xl/normal text-[var(--color-text-secondary)]">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 					Labore, deserunt!
 				</p>
@@ -65,14 +73,18 @@ const Contact = () => {
 					{loading ? "Loading..." : "Submit now"}
 					{!loading && (
 						<Image
-							src={assets.right_arrow_white}
+							src={
+								theme === "dark"
+									? assets.right_arrow_white
+									: assets.right_arrow_white
+							}
 							alt="right arrow"
 							className="w-4 h-2"
 						/>
 					)}
 				</button>
 			</form>
-		</section>
+		</motion.section>
 	);
 };
 

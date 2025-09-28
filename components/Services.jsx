@@ -1,14 +1,22 @@
 import React from "react";
 import { serviceData } from "@/assets/assets";
 import ServicesCard from "./ServicesCard";
-
+import { useTheme } from "@/contexts/ThemeContext";
+import { motion } from "framer-motion";
 const Services = () => {
+	const { theme } = useTheme();
 	return (
-		<section id="services" className="flex flex-col gap-7 justify-center items-center min-h-screen min-w-full text-[#242424]">
+		<motion.section
+			initial={{ opacity: 0, y: 50 }} // start state
+			whileInView={{ opacity: 1, y: 0 }} // animate when in viewport
+			viewport={{ once: true, amount: 0.3 }} // trigger once when 30% visible
+			transition={{ duration: 0.6, ease: "easeOut" }}
+			id="services"
+			className="bg-[var(--color-bg)] flex flex-col gap-7 justify-center items-center min-h-screen min-w-full text-[var(--color-text-primary)]">
 			<div className=" text-center w-2/5 flex flex-col gap-5 font-ovo">
 				<p className="text-2xl">What I Offer</p>
 				<p className="text-6xl">My Services</p>
-				<p className="text-[#565656] text-[20px] leading-[40px]">
+				<p className="text-[var(--color-text-secondary)] text-[20px] leading-[40px]">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit.
 					Blanditiis mollitia ad animi consectetur a corporis?
 				</p>
@@ -18,7 +26,7 @@ const Services = () => {
 					<ServicesCard key={idx} data={item} />
 				))}
 			</div>
-		</section>
+		</motion.section>
 	);
 };
 
